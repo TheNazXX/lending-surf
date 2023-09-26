@@ -1,5 +1,136 @@
 @import "vars";
 @import "libs";
 @import "fonts";
+@import "global";
 
-@import "media";
+.header{
+  position: relative;
+  height: 100vh;
+
+  &__slider-btns{
+    position: absolute;
+    top: 40px;
+    right: 80px;
+  }
+
+  &__slider-btn{
+    cursor: pointer;
+    transition: opacity .3s;
+
+    &:hover{
+      opacity: .5;
+    }
+  }
+
+}
+
+.header__slider{
+  &-item{
+    position: relative;
+    height: 100vh;
+    background-image: url(../img/main-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.slider-item__info{
+  position: absolute;
+  right: 80px;
+  bottom: 116px;
+  text-align: right;
+  color: #fff;
+  text-transform: uppercase;
+
+  &-subtitle{
+    margin-bottom: 5px;
+  }
+
+  &-title{
+    margin-bottom:48px;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 86px;
+  }
+
+  &-subtext{
+    margin-bottom: 8px;
+  }
+
+  &-text{
+    font-size: 40px;;
+    font-weight: 800;
+    line-height: 46px;
+    margin-bottom: 20px;
+  }
+
+  &-link{
+    margin-bottom: 41px;
+    transition: opacity .4s;
+
+    &:hover{
+      opacity: .5;
+    }
+  }
+}
+
+.slider-dots{
+  width: 100%;
+  max-width: 920px;
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+
+  .slick-current{
+    .dots-box{
+      border-top: solid 6px $green-color;
+    }
+  }
+}
+
+.dots-box{
+  width: 200px;
+  padding-top: 11px;
+  border-top: 6px solid #fff;
+  text-transform: uppercase;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__number{
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 34px;
+  }
+
+  &__name{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    opacity: .8;
+  }
+}
+
+.header__title{
+  position: absolute;
+  top: 0;
+  left: -20px;
+  z-index: 1;
+  opacity: .6;
+  color: #FFF;
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 156px;
+  text-transform: uppercase;
+}
+
+.header__aside{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
