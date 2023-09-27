@@ -1,17 +1,30 @@
-*,
-::after,
-::before{
+html{
   box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
 }
 
 body{
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
+  background-color: $dark;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 a{
   display: inline-block;
   text-decoration: none;
+  color: #fff;  
+}
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 button{
@@ -19,7 +32,60 @@ button{
   border: none;
 }
 
-.subtitle--left{
+
+.container{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.title{ 
+  span{
+    display: inline-block;
+    position: relative;
+    color: rgba(#fff, .04);
+    font-size: 200px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transform: translateX(-50px)
+  };
+  h3{
+    padding-top: 10px;
+    position: absolute;
+    top: 0px;
+    right: -20px;
+    color: #fff;
+    margin: 0;
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    &::after{
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: "";
+      background-color: $green-color;
+      width: 80px;
+      height: 1px;
+    }
+  }
+}
+
+.subtitle{
+  display: inline-block;
+  text-align: right;
+  &__head{
+    font-size: 40px;
+    font-weight: 800;
+
+    span{
+      font-weight: 100;
+    }
+  }
+}
+
+.headline--left{
   position: relative;
   color: #FFF;
   font-size: 22px;
@@ -41,5 +107,17 @@ button{
     opacity: .5;
     left: 0;
     top: 50%;
+  }
+}
+
+.slider-btn{
+  cursor: pointer;
+  &--hide{
+    opacity: 0.25;
+    transition: opacity .4s;
+
+    &:hover{
+      opacity: 1;
+    }
   }
 }

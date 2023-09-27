@@ -9,6 +9,7 @@
 
   &__slider-btns{
     position: absolute;
+    z-index: 2;
     top: 40px;
     right: 80px;
   }
@@ -40,7 +41,6 @@
   right: 80px;
   bottom: 116px;
   text-align: right;
-  color: #fff;
   text-transform: uppercase;
 
   &-subtitle{
@@ -94,7 +94,6 @@
   padding-top: 11px;
   border-top: 6px solid #fff;
   text-transform: uppercase;
-  color: #fff;
 
   display: flex;
   align-items: center;
@@ -114,13 +113,19 @@
   }
 }
 
+.header__map{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
 .header__title{
   position: absolute;
   top: 0;
   left: -20px;
   z-index: 1;
-  opacity: .6;
-  color: #FFF;
+  opacity: .1;
   font-size: 200px;
   font-style: normal;
   font-weight: 800;
@@ -129,8 +134,138 @@
 }
 
 .header__aside{
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   left: 0;
   top: 0;
+  height: 100%;
+  z-index: 2;
+  border-right: 1px solid rgba(#fff, .25);
+
+  &-search{
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: opacity .4s;
+
+    &:hover{
+      opacity: .5;
+    }
+  }
+  &-time{
+    margin-top: auto;
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 64px;
+    margin-bottom: 30px;
+
+    span{
+      margin-top: 8px;
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 19px;
+      letter-spacing: 1.4px;
+      opacity: .8;
+    }
+  }
+  &-mark{
+    display: flex;
+    align-items: center;
+    img{
+      margin-right: 8px;
+    }
+    span{
+      text-align: center;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 14px;
+      letter-spacing: 1.05px;
+    }
+  }
 }
 
+.menu{
+  margin-top: auto;
+  &__item{
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: opacity .4s;
+
+    &:hover{
+      opacity: .5;
+    }
+  }
+  &__item-img{
+    margin-bottom: 6px;
+  }
+  &__item-text{
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+  }
+}
+
+.header__arrows{
+  position: absolute;
+  left: 210px;
+  bottom: 30px;
+  z-index: 1;
+}
+
+.line-animation{
+  stroke-dashoffset: 600;
+  stroke-dasharray: 600;
+  animation: animdash 3s infinite 6s;
+}
+
+@keyframes animdash{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+/*---------------------------------------------------------------SURF----------------------------------------------------------------------------------*/
+
+.surf{
+  padding: 160px 0 210px;
+  background-image: url(../img/big-mark.svg);
+  background-position: 109% 200px;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  &__subtitle{
+    margin-top: -70px;
+    text-align: right;
+    padding-right: 80px;
+  }
+}
+
+.surf-slider{
+  &-btns{
+    margin-top: 60px;
+    text-align: right;
+    margin-right: 80px;
+    margin-bottom: 32px;
+  }
+}
+
+.surf-box{
+  min-height: 750px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__inner-location{
+    span{
+      font-weight: 100;
+    }
+  }
+}
