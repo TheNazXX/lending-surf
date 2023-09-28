@@ -5,7 +5,7 @@ html{
 *,
 *::after,
 *::before{
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body{
@@ -118,6 +118,56 @@ button{
 
     &:hover{
       opacity: 1;
+    }
+  }
+}
+
+.btn{
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 36px;
+
+  span{
+    position: relative;
+    margin-left: 19px;
+    padding: 17px 57px 15px 17px;
+    background-color: $green-color;
+    transition: all .4s;
+
+    &::before{
+      width: 20px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -10px;
+      z-index: 1;
+      content: "";
+      background-color: #fff;
+    }
+    &::after{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 18px;
+      content: "";
+      width: 25px;
+      height: 21px;
+      background-image: url(../img/arrow-right.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: all .4s;
+    }
+  }
+
+  &:hover{
+    span{
+      background-color: transparent;
+      &::after{
+        right: 14px;
+      }
     }
   }
 }

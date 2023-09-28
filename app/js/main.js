@@ -19,8 +19,19 @@ $(function(){
   $(".surf-slider").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
+    centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     prevArrow: $(".surf-slick-prev-btn"),
     nextArrow: $(".surf-slick-next-btn"),
-  })
+    asNavFor: ".slider-map"
+  });
+
+  $(".slider-map").slick({
+    slidesToShow: 8,
+    arrows: false,
+    asNavFor: ".surf-slider",
+    focusOnSelect: true
+  });
   
 });
