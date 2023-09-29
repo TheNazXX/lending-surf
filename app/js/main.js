@@ -20,8 +20,8 @@ $(function(){
     slidesToShow: 4,
     slidesToScroll: 1,
     centerMode: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
+
+    autoplaySpeed: 4000,
     prevArrow: $(".surf-slick-prev-btn"),
     nextArrow: $(".surf-slick-next-btn"),
     asNavFor: ".slider-map"
