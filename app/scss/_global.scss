@@ -34,7 +34,7 @@ button{
 
 
 .container{
-  max-width: 1920px;
+  max-width: 1940px;
   margin: 0 auto;
 }
 
@@ -74,10 +74,14 @@ button{
 
 .subtitle{
   display: inline-block;
-  text-align: right;
   &__head{
     font-size: 40px;
     font-weight: 800;
+
+    &--center{
+      display: flex;
+      align-items: center;
+    }
 
     span{
       font-weight: 100;
@@ -85,7 +89,8 @@ button{
   }
 }
 
-.headline--left{
+.headline{
+  margin-bottom: 8px;
   position: relative;
   color: #FFF;
   font-size: 22px;
@@ -94,7 +99,6 @@ button{
   letter-spacing: 7.333px;
   text-transform: uppercase;
   opacity: .5;
-  padding-left: 103px;
   text-align: right;
   display: inline-block;
 
@@ -105,10 +109,25 @@ button{
     height: 1px;
     background-color: #fff;
     opacity: .5;
-    left: 0;
     top: 50%;
   }
 }
+
+.headline--left{
+  padding-left: 103px;
+  &::before{
+    left: 0;
+  }
+}
+
+.headline--right{
+  padding-right: 103px;
+  &::before{
+    right: 0;
+  }
+}
+
+
 
 .slider-btn{
   cursor: pointer;
