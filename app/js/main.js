@@ -41,6 +41,36 @@ $(function(){
     nextArrow: $(".travel-slick-next-btn"),
   });
 
+  $(".js-sleep-slider").slick({
+    slidesToShow: 1,
+    fade: true,
+    prevArrow: $(".sleep-slick-prev-btn"),
+    nextArrow: $(".sleep-slick-next-btn"),
+  });
 });
+
+$(function(){
+  const calcBtns = $(".js-calc-btns");
+  
+  calcBtns.on("click", function({target, currentTarget}){
+    const textBlock = $(`#${currentTarget.dataset.type}`)
+    let num = parseInt(textBlock.text())
+
+    if(target.closest(".calc-btn")){
+      target.closest(".calc-btn").dataset.type === "plus" ? num++ : num > 0 ? num-- : num
+      textBlock.text(`${num} ${currentTarget.dataset.type}`)
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
 
 
