@@ -34,6 +34,7 @@ button{
 
 
 .container{
+  padding: 0 20px;
   max-width: 1940px;
   margin: 0 auto;
 }
@@ -146,11 +147,12 @@ button{
   font-size: 40px;
   font-weight: 800;
   line-height: 36px;
+  padding: 17px 0px 17px 17px;
 
   span{
     position: relative;
     margin-left: 19px;
-    padding: 17px 57px 15px 17px;
+    padding: 10px 57px 10px 17px;
     background-color: $green-color;
     transition: all .4s;
 
@@ -190,3 +192,6 @@ button{
     }
   }
 }
+
+
+/*----------------------------slider-scetions---------------------------*/ 

@@ -33,5 +33,14 @@ $(function(){
     asNavFor: ".surf-slider",
     focusOnSelect: true
   });
-  
+
+  $(".js-travel-slider").slick({
+    slidesToShow: 1,
+    fade: true,
+    prevArrow: $(".travel-slick-prev-btn"),
+    nextArrow: $(".travel-slick-next-btn"),
+  });
+
 });
+
+
