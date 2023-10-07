@@ -13,6 +13,23 @@ $(function () {
     slidesToShow: 4,
     slidesToScroll: 4,
     asNavFor: '.header__slider',
+    responsive: [
+      {
+        breakpoint: 820,
+        settings: {
+          arrows: false,
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 550,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
   });
 
   $('.surf-slider').slick({

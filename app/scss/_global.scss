@@ -20,6 +20,7 @@ section{
   max-width: 1920px;
   margin: 0 auto;
   padding: 160px 0 120px;
+  background-position: left bottom;
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -233,7 +234,6 @@ button{
 
 .section-slider{
   &__head{
-    margin-top: -60px;
     min-height: 780px;
     background-position: top left;
     background-size: 80% 100%;
