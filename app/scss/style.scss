@@ -328,12 +328,13 @@
   min-height: 635px;
   background-image: url(../img/surf-map.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 
 
   .slick-list{
     height: 635px;
+    overflow: visible;
   }
 
   .slick-current{
@@ -346,6 +347,7 @@
       width: 24px;
       height: 33px;
       background-image: url(../img/slider-map-dots-active.svg);
+      box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.84), inset 0px 0px 80px rgba(74, 246, 205, 0.22);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -367,6 +369,7 @@
     width: 24px;
     height: 24px;
     background-color: $green-color;
+    box-shadow: 0px 0px 35px (rgba(74, 246, 205, 0.84));
     border-radius: 50%;
 
     &[data-sliderCircle='1']{
@@ -426,7 +429,7 @@
 
       & + .slider-dots-map__content{
         left: 35%;
-        top: 0px;
+        top: -25px;
       }
     }
     &[data-sliderCircle='6']{
@@ -805,123 +808,4 @@
   }
 }
 
-
-@media(max-height: 840px){
-  .logo__img{
-    max-height: 170px;
-  }
-  .menu__item-img{
-    width: 40px;
-    height: 30px;
-  }
-}
-
-
-@media(max-height: 700px){
-  .header__aside-time{
-    text-align: center;
-    font-size: 36px;
-
-    span{
-      margin-top: 2px;
-    }
-  }
-}
-
-
-@media(max-height: 1140px){
-
-  .slider-dots{
-    max-width: 600px;
-  }
-
-  .dots-box{
-    gap: 10px;
-    max-width: 100px;
-
-    &__name{
-      text-align: right;
-    }
-  }
-}
-
-
-@media(max-width: 960px){
-  .slider-item__info-title{
-    font-size: 44px;
-    margin-bottom: 24px;
-  }
-
-  .slider-item__info-text{
-    font-size: 34px;
-  }
-}
-
-
-@media(max-width: 820px){
-  .slider-dots{
-    max-width: 350px;
-  }
-  
-  .slider-item__info{
-    right: 25px;
-  }
-
-  .header__map{
-    top: -50px;
-    right: -200px;
-  }
-}
-
-
-@media(max-width: 550px){
-  .slider-dots{
-    max-width: 125px;
-    transform: translateX(50px);
-  }
-
-}
-
-
-@media(max-width: 470px){
-  .header__arrows{
-    left: 130px;
-    bottom: 15px;
-  }
-
-  .header__map{
-    opacity: .6;
-    width: 300px;
-    height: 300px;
-    top: -61px;
-    right: 470px;
-  }
-
-  .header__title{
-    font-size: 150px;
-  }
-}
-
-
-
-@media(max-width: 420px){
-  .slider-item__info-title{
-    font-size: 26px;
-    line-height: 30px;
-  }
-
-  .slider-item__info-subtitle{
-    font-size: 22px;
-    line-height: 26px;
-  }
-
-  .slider-item__info-text{
-    font-size: 22px;
-    line-height: 26px;
-  }
-
-  .slider-item__info-subtext{
-    font-size: 20px;
-    line-height: 24px;
-  }
-}
+@import "media";

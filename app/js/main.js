@@ -41,6 +41,15 @@ $(function () {
     prevArrow: $('.surf-slick-prev-btn'),
     nextArrow: $('.surf-slick-next-btn'),
     asNavFor: '.slider-map',
+    responsive: [
+      {
+        breakpoint: 1170,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false
+        }
+      }
+    ]
   });
 
   $('.slider-map').slick({
