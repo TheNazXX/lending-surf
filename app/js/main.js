@@ -46,7 +46,18 @@ $(function () {
         breakpoint: 1170,
         settings: {
           slidesToShow: 3,
-          centerMode: false
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 470,
+        settings: {
+          slidesToShow: 1,
         }
       }
     ]

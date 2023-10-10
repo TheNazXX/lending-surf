@@ -238,13 +238,19 @@
   padding: 160px 0 120px;
   background-image: url(../img/big-mark.svg);
   background-position: 109% 200px;
-  background-repeat: no-repeat;
-  background-size: auto;
+ background-repeat: no-repeat;
+  background-size: auto; 
 
   &__subtitle{
     margin-top: -70px;
     text-align: right;
     padding-right: 80px;
+  }
+
+  &__wrapper{
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
   }
 }
 
