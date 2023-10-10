@@ -4,7 +4,7 @@
   "description": "start gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages --dist 'dist' --branch 'release'"
   },
   "author": "Vadim Prokopchuk",
   "license": "ISC",
@@ -22,6 +22,7 @@
     "sass": "^1.68.0"
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "slick-carousel": "^1.8.1"
   }
 }
