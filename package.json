@@ -2,9 +2,10 @@
   "name": "gulp-start",
   "version": "1.0.0",
   "description": "start gulp",
+  "homepage": "https://thenazxx.github.io/lending-surf/",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages --dist 'dist' --branch 'release'"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Vadim Prokopchuk",
   "license": "ISC",

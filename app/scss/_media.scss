@@ -338,7 +338,9 @@
 }
 
 @media(max-width: 690px){
-
+  .header__slider-btns{
+    display: none;
+  }
   .surf{
     &__subtitle{
       margin-top: 25px;
@@ -423,6 +425,21 @@
 
 
 @media(max-width: 550px){
+  .header__map{
+    right: -150px;
+    top: -100px;
+    svg{
+      width: 750px;
+      height: 500px;
+    }
+  }
+  .header__aside{
+    backdrop-filter: blur(5px);
+    
+    .logo img{
+      max-width: 100px;
+    }
+  }
   .slider-dots{
     max-width: 125px;
     transform: translateX(50px);
@@ -466,14 +483,6 @@
   .header__arrows{
     left: 130px;
     bottom: 15px;
-  }
-
-  .header__map{
-    opacity: .6;
-    width: 300px;
-    height: 300px;
-    top: -61px;
-    right: 470px;
   }
 
   .header__title{
@@ -610,6 +619,17 @@
 
 
 @media(max-width: 420px){
+
+  .header__map{
+    right: -85px;
+    top: -50px;
+    svg{
+      width: 500px;
+      height: 300px;
+    }
+  }
+
+
   .slider-item__info-title{
     font-size: 26px;
     line-height: 30px;
@@ -632,6 +652,11 @@
 }
 
 @media(max-width: 370px){
+
+  .header__map{
+    right: -105px;
+  }
+
   .slider-dots-map{
     &__circle{
       &[data-sliderCircle='8']{

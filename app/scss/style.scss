@@ -238,7 +238,7 @@
   padding: 160px 0 120px;
   background-image: url(../img/big-mark.svg);
   background-position: 109% 200px;
- background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: auto; 
 
   &__subtitle{
@@ -284,9 +284,12 @@
 
 .surf-box{
   text-align: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+
+  &__wrapper{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   &__inner{
     display: flex;
